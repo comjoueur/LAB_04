@@ -11,4 +11,5 @@ int main(){
 	cin>>a;
 	if(testprime(a)) cout<<"es primo"<<endl;
 	else cout<<"no es primo"<<endl;
+	return 0;
 }
