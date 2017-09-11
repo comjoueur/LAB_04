@@ -211,4 +211,5 @@ int main(){
     cout<<x<<" |"<<endl;
     for(int i=0;i<g;i++)cout<<arr[i]<<" |"<<rsp[i]<<endl;
     //FIN DE IMPRESION
+    return 0;
 }
