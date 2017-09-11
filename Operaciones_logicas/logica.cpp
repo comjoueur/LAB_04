@@ -25,7 +25,7 @@ string reemplazar(string a,string b){//reemplaza a la primera palabra con los Va
 	for(int i=0;i<a.size();i++) if((a[i]>='A' and a[i]<='Z') or (a[i]>='a' and a[i]<='z')) a[i]=b[k++];
 	return a;
 }
-char resolver(string p){
+char resolver(string p){//resuelve una expresion
 	if(p.size()==1)return p[0];//si solo hay un caracter es porque es un valor
 	for(int i=0;i<p.size();i++){
 		//hallamos operaciones entre parentesis para reducir el problema y resolver el subproblema
@@ -89,12 +89,12 @@ char resolver(string p){
 		}
 	}
 }
-int operador(char a){
+int operador(char a){//reconoce el tipo de caracter
 	if(a=='~') return 1;//si es negacion
 	if(a=='&' or a=='+' or a=='|') return 2;//si necesita dos variables
 	return 0;
 }
-bool correcto(string p){
+bool correcto(string p){//revisa si la expresion es correcta
 	for(int i=0;i<p.size();i++){
 		if(p[i]!='~' and p[i]!='(' and p[i]!=')' and p[i]!='+' and p[i]!='&' and p[i]!='|' and (p[i]<'a' or p[i]>'z') and (p[i]<'A' or p[i]>'Z')){//que este dentro de los caracteres permitidos
 			return false;
@@ -179,7 +179,7 @@ int main(){
     cout<<endl;
     cin>>x;
     //COMIENZO DE VALIDACION DE LA EXPRESION
-    if(not correcto(x)){
+    if(not correcto(x)){//para saber si la expresion es correcta
     	cout<<"La expresion introducida no es valida"<<endl;
 	return 0;
     }
